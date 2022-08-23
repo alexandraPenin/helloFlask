@@ -26,9 +26,33 @@ poetry new hello_flask
 │   └── hello_flask.py
 ├── poetry.lock
 ├── pyproject.toml
-├── README.rst
+├── README.md
 └── tests
     ├── __init__.py
     └── test_hello_flask.py
+
+
+# Installation et utilisation de Poetry
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+nano -w ~/.bashrc # rajouter dans son dossier la phrase
+poetry --version
+
+cd ~/Documents/
+poetry new cow-counts
+cd cow-counts
+touch cow_counts/mycow.py
+poetry add cowsay
+poetry new cow-counts # crée une structure de dossier type
+
+poetry install
+poetry run count Hello World
+poetry build
+tree ~/Documents/cow-counts/dist
+
+cd ~/Documents/helloFlask
+poetry init --no-interaction
+
+pip install cow_counts-0.1.0-py3-none-any.whl # se positionner dans le dossier du wheel et dans son nouvel environnement, installer le wheel
+count Hello World
 
 
