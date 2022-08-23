@@ -17,17 +17,9 @@ pyenv activate helloFlask
 
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
+poetry new hello_flask
 
-├── cow_counts
-│   ├── __init__.py
-│   └── mycow.py
-├── poetry.lock
-├── pyproject.toml
-├── README.rst
-└── tests
-    ├── __init__.py
-    └── test_cow_counts.py
-
+# Tree du projet
 
 ├── hello_flask
 │   ├── __init__.py
@@ -40,9 +32,3 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
     └── test_hello_flask.py
 
 
-
-
-
-
-
-poetry new hello_flask
