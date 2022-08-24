@@ -1,0 +1,7 @@
+Alex John,('Doe',),go to home,
+John,('Doe',),stay here,
+John,('Doe',),go to home,
+John,('Doe',),go to home,
+John,('Doe',),go to home,
+John,('rytfyrt',),stay here,
+John,('fuffigy',),I don't know,

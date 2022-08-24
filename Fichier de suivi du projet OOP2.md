@@ -6,3 +6,4 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 
 pyenv global
 pyenv local 3.8.6
+

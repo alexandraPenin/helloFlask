@@ -17,7 +17,38 @@ pyenv activate helloFlask
 
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
-poetry new hello_flask
+poetry new hello_flask 
+
+# PYENV => sert à installer au tout début une version de python qui sera utilisée par la suite
+# LIST DES COMMANDES
+pyenv install (--list)
+#pyenv virtualenv 3.10.6 nom_du_nouvel_env
+pyenv activate nom _du_nouvel_env
+pyenv virtualenvs
+pyenv versions
+pyenv shell
+pyenv global nom_du_nouvel_env
+pyenv local
+
+
+
+# PERMETS DE CREER UNE STRUCTURE TRANSPARENTE + CREE UN ENVIRONNEMENT
+# A AUCUN MOMENT ON A BESOIN DE SAVOIR OU VA LA LIBRARY - FAIT JUST POETRY ADD - TOUT EST DANS LE WHEEL LA ROUE
+# poetry -> gestion de l'environnement virtuel
+#        -> arborescence du projet
+#        -> gestion des dépendances (et conflit de dépendances et verbeux explique les dépendances en conflits)
+#        -> packaging
+# LIST DES COMMANDES
+poetry new nom-projet # tiret du milieu très important, en minuscule
+poetry add [ou remove] nom_du_packet
+poetry shell -> puis python script.py // identique
+poetry run [python / count / ...] -> puis python script.py // identique
+poetry install # rajoute dans le fichier .locl les dépendances versions
+poetry build # crée un dossier dist/ dans lequel il y aura un wheel, un pack reproductible et installable et un fichier tar.gz 
+
+
+
+
 
 # Tree du projet
 
@@ -54,5 +85,16 @@ poetry init --no-interaction
 
 pip install cow_counts-0.1.0-py3-none-any.whl # se positionner dans le dossier du wheel et dans son nouvel environnement, installer le wheel
 count Hello World
+
+
+
+from flask import Flask # import de l’objet Flask
+app = Flask(__name__) # instantiation application
+@app.route("/") # association d’une route (URL) avec la fonction ‘home()’
+def home():
+return "<p>Bienvenue chez moi</p>" # on renvoie une chaîne de caractères
+app.run() # démarrage de l’application
+
+
 
 
