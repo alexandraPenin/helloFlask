@@ -37,9 +37,8 @@ def form():
 
 
 
-
-
-
 #open and read the file after the appending:
 
-app.run(debug=True) # démarrage de l’application
+app.run(debug=True, host='0.0.0.0') # démarrage de l’application
+# 127.0.0.1 -> localhost
+# 0.0.0.0
