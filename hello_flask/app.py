@@ -1,8 +1,15 @@
 from flask import Flask # import de l’objet Flask
+import os
 from flask import render_template
 from flask import request
 
 app = Flask(__name__) # instantiation application
+
+
+PORT= os.environ.get("PORT") or 5000
+HOST= os.environ.get("HOST") or "localhost"
+
+
 
 @app.route("/") # association d’une route (URL) avec la fonction ‘home()’
 def home():
@@ -39,6 +46,6 @@ def form():
 
 #open and read the file after the appending:
 
-app.run(debug=True, host='0.0.0.0') # démarrage de l’application
+app.run(debug=True, host=HOST, port=PORT) # démarrage de l’application
 # 127.0.0.1 -> localhost
 # 0.0.0.0
